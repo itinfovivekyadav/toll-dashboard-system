@@ -1,4 +1,4 @@
-﻿import os
+import os
 from http.server import BaseHTTPRequestHandler, HTTPServer
 
 PORT = int(os.environ.get("PORT", 8080))
@@ -174,39 +174,39 @@ tr:nth-child(even){background:#0b2e50}
 </head>
 <body>
 <header>
- <div class="brand"><div class="logo">â™œ</div><div><h1>Toll Plaza Management System</h1><div class="subtitle">8 Lane | FASTag | AVC | ANPR | Real-time Monitoring</div></div></div>
- <div class="topright"><span class="online">â— System Online</span><span class="topitem">28-06-2025&nbsp; 10:24 AM</span><span class="topitem" id="user-label">â™Ÿ Guest</span><button id="login-btn" class="topitem" style="background:#087fc4;color:white;border:0;padding:9px 14px;border-radius:4px;cursor:pointer">Login</button><button id="logout-btn" class="topitem" style="background:#8d2636;color:white;border:0;padding:9px 14px;border-radius:4px;cursor:pointer">Logout</button></div>
+ <div class="brand"><div class="logo">TOLL</div><div><h1>Toll Plaza Management System</h1><div class="subtitle">8 Lane | FASTag | AVC | ANPR | Real-time Monitoring</div></div></div>
+ <div class="topright"><span class="online">ONLINE System Online</span><span class="topitem">28-06-2025&nbsp; 10:24 AM</span><span class="topitem" id="user-label">USER Guest</span><button id="login-btn" class="topitem" style="background:#087fc4;color:white;border:0;padding:9px 14px;border-radius:4px;cursor:pointer">Login</button><button id="logout-btn" class="topitem" style="background:#8d2636;color:white;border:0;padding:9px 14px;border-radius:4px;cursor:pointer">Logout</button></div>
 </header>
 <div class="app">
 <aside>
- <div class="nav active"><span class="ico">âŒ‚</span>Dashboard</div>
- <div class="nav"><span class="ico">ðŸš¦</span>Lane Monitoring</div>
- <div class="nav"><span class="ico">â–¤</span>Transactions</div>
- <div class="nav"><span class="ico">â—†</span>FASTag Management</div>
- <div class="nav"><span class="ico">â–£</span>AVC &amp; ANPR</div>
- <div class="nav"><span class="ico">ðŸš˜</span>AVCC</div>
- <div class="nav"><span class="ico">â–¥</span>Reports</div>
- <div class="nav"><span class="ico">âš™</span>Devices</div>
- <div class="nav"><span class="ico">âš™</span>Settings</div>
- <div class="nav"><span class="ico">ðŸ‘¤</span>User Management</div>
- <div class="nav"><span class="ico">ðŸ–¥</span>UFD Display</div>
+ <div class="nav active"><span class="ico">DASHBOARD</span>Dashboard</div>
+ <div class="nav"><span class="ico">LANE</span>Lane Monitoring</div>
+ <div class="nav"><span class="ico">TRANSACTIONS</span>Transactions</div>
+ <div class="nav"><span class="ico">ONLINE</span>FASTag Management</div>
+ <div class="nav"><span class="ico">AVC & ANPR</span>AVC &amp; ANPR</div>
+ <div class="nav"><span class="ico">VEHICLE</span>AVCC</div>
+ <div class="nav"><span class="ico">REPORTS</span>Reports</div>
+ <div class="nav"><span class="ico">SETTINGS</span>Devices</div>
+ <div class="nav"><span class="ico">SETTINGS</span>Settings</div>
+ <div class="nav"><span class="ico">USER</span>User Management</div>
+ <div class="nav"><span class="ico">DISPLAY</span>UFD Display</div>
  <div class="sys"><h3>System Status</h3>
-  <div class="sysrow"><span>ðŸŸ¢ API Server</span><span class="ok">Connected</span></div>
-  <div class="sysrow"><span>ðŸŸ¢ MySQL Database</span><span class="ok">Connected</span></div>
-  <div class="sysrow"><span>ðŸŸ¢ Camera (ANPR)</span><span class="ok">Online</span></div>
-  <div class="sysrow"><span>ðŸŸ¢ AVC System</span><span class="ok">Online</span></div>
-  <div class="sysrow"><span>ðŸŸ¢ Lane Controllers</span><span class="ok">Online</span></div>
-  <div class="sysrow"><span>ðŸŸ¢ Network</span><span class="ok">OK</span></div>
+  <div class="sysrow"><span>ONLINE API Server</span><span class="ok">Connected</span></div>
+  <div class="sysrow"><span>ONLINE MySQL Database</span><span class="ok">Connected</span></div>
+  <div class="sysrow"><span>ONLINE Camera (ANPR)</span><span class="ok">Online</span></div>
+  <div class="sysrow"><span>ONLINE AVC System</span><span class="ok">Online</span></div>
+  <div class="sysrow"><span>ONLINE Lane Controllers</span><span class="ok">Online</span></div>
+  <div class="sysrow"><span>ONLINE Network</span><span class="ok">OK</span></div>
  </div>
  <div class="version">Toll Plaza v1.0<br><br>Created by<br><b>Vivek Yadav</b></div>
 </aside>
 <main>
  <div class="stats">
-  <div class="stat"><div class="staticon">ðŸš˜</div><div><div class="statlabel">Total Vehicles</div><div class="statnum" id="kpi-total">1,248</div><div class="statfoot"><span class="up">â†‘ 12%</span> (vs yesterday)</div></div></div>
-  <div class="stat"><div class="staticon">âœ“</div><div><div class="statlabel">Approved</div><div class="statnum" id="kpi-approved">1,213</div><div class="statfoot"><span class="up">â†‘ 14%</span> (vs yesterday)</div></div></div>
-  <div class="stat"><div class="staticon">âœ•</div><div><div class="statlabel">Declined</div><div class="statnum" id="kpi-declined">35</div><div class="statfoot">â†“ 8% (vs yesterday)</div></div></div>
-  <div class="stat"><div class="staticon">â‚¹</div><div><div class="statlabel">Total Toll Revenue</div><div class="statnum" id="kpi-revenue">â‚¹ 3,74,650</div><div class="statfoot"><span class="up">â†‘ 16%</span> (vs yesterday)</div></div></div>
-  <div class="stat"><div class="staticon">ðŸ›£</div><div><div class="statlabel">Active Lanes</div><div class="statnum">8 / 8</div><div class="statfoot">All Lanes Operational</div></div></div>
+  <div class="stat"><div class="staticon">VEHICLE</div><div><div class="statlabel">Total Vehicles</div><div class="statnum" id="kpi-total">1,248</div><div class="statfoot"><span class="up">UP 12%</span> (vs yesterday)</div></div></div>
+  <div class="stat"><div class="staticon">APPROVED</div><div><div class="statlabel">Approved</div><div class="statnum" id="kpi-approved">1,213</div><div class="statfoot"><span class="up">UP 14%</span> (vs yesterday)</div></div></div>
+  <div class="stat"><div class="staticon">DECLINED</div><div><div class="statlabel">Declined</div><div class="statnum" id="kpi-declined">35</div><div class="statfoot">DOWN 8% (vs yesterday)</div></div></div>
+  <div class="stat"><div class="staticon">Rs.</div><div><div class="statlabel">Total Toll Revenue</div><div class="statnum" id="kpi-revenue">Rs. 3,74,650</div><div class="statfoot"><span class="up">UP 16%</span> (vs yesterday)</div></div></div>
+  <div class="stat"><div class="staticon">LANES</div><div><div class="statlabel">Active Lanes</div><div class="statnum">8 / 8</div><div class="statfoot">All Lanes Operational</div></div></div>
  </div>
  <section class="plaza">
   <div class="plazatitle">TOLL PLAZA - 8 LANE</div>
@@ -216,14 +216,14 @@ tr:nth-child(even){background:#0b2e50}
   <section class="panel"><div class="panelhead">Recent Transactions <span>View All</span></div>
    <table><thead><tr><th>#</th><th>Time</th><th>Lane</th><th>Vehicle No.</th><th>Class</th><th>Amount</th><th>Status</th></tr></thead>
    <tbody>
-   <tr><td>1</td><td>10:23:45</td><td>3</td><td>HR26DK9012</td><td>1</td><td>â‚¹80</td><td><span class="status">Approved</span></td></tr>
-   <tr><td>2</td><td>10:22:31</td><td>2</td><td>DL8CA5678</td><td>2</td><td>â‚¹120</td><td><span class="status">Approved</span></td></tr>
-   <tr><td>3</td><td>10:21:17</td><td>7</td><td>UP32KL1122</td><td>1</td><td>â‚¹80</td><td><span class="status">Approved</span></td></tr>
-   <tr><td>4</td><td>10:19:56</td><td>1</td><td>UP16AB1234</td><td>1</td><td>â‚¹80</td><td><span class="status">Approved</span></td></tr>
-   <tr><td>5</td><td>10:18:40</td><td>5</td><td>RJ14GD7890</td><td>4</td><td>â‚¹570</td><td><span class="status">Approved</span></td></tr>
-   <tr><td>6</td><td>10:17:22</td><td>8</td><td>MH12AB3456</td><td>2</td><td>â‚¹120</td><td><span class="status">Approved</span></td></tr>
-   <tr><td>7</td><td>10:15:03</td><td>4</td><td>PB10EF3456</td><td>3</td><td>â‚¹320</td><td><span class="status">Approved</span></td></tr>
-   <tr><td>8</td><td>10:13:17</td><td>6</td><td>--</td><td>--</td><td>â‚¹0</td><td><span class="status denied">Declined</span></td></tr>
+   <tr><td>1</td><td>10:23:45</td><td>3</td><td>HR26DK9012</td><td>1</td><td>Rs.80</td><td><span class="status">Approved</span></td></tr>
+   <tr><td>2</td><td>10:22:31</td><td>2</td><td>DL8CA5678</td><td>2</td><td>Rs.120</td><td><span class="status">Approved</span></td></tr>
+   <tr><td>3</td><td>10:21:17</td><td>7</td><td>UP32KL1122</td><td>1</td><td>Rs.80</td><td><span class="status">Approved</span></td></tr>
+   <tr><td>4</td><td>10:19:56</td><td>1</td><td>UP16AB1234</td><td>1</td><td>Rs.80</td><td><span class="status">Approved</span></td></tr>
+   <tr><td>5</td><td>10:18:40</td><td>5</td><td>RJ14GD7890</td><td>4</td><td>Rs.570</td><td><span class="status">Approved</span></td></tr>
+   <tr><td>6</td><td>10:17:22</td><td>8</td><td>MH12AB3456</td><td>2</td><td>Rs.120</td><td><span class="status">Approved</span></td></tr>
+   <tr><td>7</td><td>10:15:03</td><td>4</td><td>PB10EF3456</td><td>3</td><td>Rs.320</td><td><span class="status">Approved</span></td></tr>
+   <tr><td>8</td><td>10:13:17</td><td>6</td><td>--</td><td>--</td><td>Rs.0</td><td><span class="status denied">Declined</span></td></tr>
    </tbody></table>
   </section>
   <section class="panel"><div class="panelhead">FASTag / Payment Status</div>
@@ -240,28 +240,28 @@ tr:nth-child(even){background:#0b2e50}
   </section>
   <section class="panel"><div class="panelhead">Recent Events / Alerts <span>View All</span></div>
    <div class="event eventhead"><span>Time</span><span>Lane</span><span>Event</span><span>Details</span></div>
-   <div class="event"><span>10:23</span><span>3</span><span>â— Payment Success</span><span>FASTag: ******1234</span></div>
-   <div class="event"><span>10:22</span><span>2</span><span>â— Vehicle Detected</span><span>DL8CA5678 (Class 2)</span></div>
-   <div class="event"><span>10:21</span><span>6</span><span>â— Lane Closed</span><span>Maintenance Mode</span></div>
-   <div class="event"><span>10:17</span><span>7</span><span>â— Payment Success</span><span>FASTag: ******1122</span></div>
-   <div class="event"><span>10:15</span><span>1</span><span>â— ANPR Capture</span><span>UP16AB1234</span></div>
-   <div class="event"><span>10:18</span><span>5</span><span>â— Payment Success</span><span>FASTag: ******7890</span></div>
-   <div class="event"><span>10:17</span><span>8</span><span>â— Vehicle Detected</span><span>MH12AB3456 (Class 2)</span></div>
-   <div class="event"><span>10:15</span><span>4</span><span>â— Payment Success</span><span>FASTag: ******3456</span></div>
+   <div class="event"><span>10:23</span><span>3</span><span>ONLINE Payment Success</span><span>FASTag: ******1234</span></div>
+   <div class="event"><span>10:22</span><span>2</span><span>ONLINE Vehicle Detected</span><span>DL8CA5678 (Class 2)</span></div>
+   <div class="event"><span>10:21</span><span>6</span><span>ONLINE Lane Closed</span><span>Maintenance Mode</span></div>
+   <div class="event"><span>10:17</span><span>7</span><span>ONLINE Payment Success</span><span>FASTag: ******1122</span></div>
+   <div class="event"><span>10:15</span><span>1</span><span>ONLINE ANPR Capture</span><span>UP16AB1234</span></div>
+   <div class="event"><span>10:18</span><span>5</span><span>ONLINE Payment Success</span><span>FASTag: ******7890</span></div>
+   <div class="event"><span>10:17</span><span>8</span><span>ONLINE Vehicle Detected</span><span>MH12AB3456 (Class 2)</span></div>
+   <div class="event"><span>10:15</span><span>4</span><span>ONLINE Payment Success</span><span>FASTag: ******3456</span></div>
   </section>
  </div>
 </main>
 </div>
 <script>
 const data=[
- {no:"UP16AB1234",cls:"Car (Class 1)",ax:2,amt:80,open:true,car:"ðŸš™"},
- {no:"DL8CA5678",cls:"LCV (Class 2)",ax:2,amt:120,open:true,car:"ðŸš™"},
- {no:"HR26DK9012",cls:"Car (Class 1)",ax:2,amt:80,open:true,car:"ðŸš—"},
- {no:"PB10EF3456",cls:"Bus (Class 3)",ax:2,amt:320,open:true,car:"ðŸšŒ"},
- {no:"RJ14GD7890",cls:"Truck (Class 4)",ax:4,amt:570,open:true,car:"ðŸšš"},
+ {no:"UP16AB1234",cls:"Car (Class 1)",ax:2,amt:80,open:true,car:"CAR"},
+ {no:"DL8CA5678",cls:"LCV (Class 2)",ax:2,amt:120,open:true,car:"CAR"},
+ {no:"HR26DK9012",cls:"Car (Class 1)",ax:2,amt:80,open:true,car:"CAR"},
+ {no:"PB10EF3456",cls:"Bus (Class 3)",ax:2,amt:320,open:true,car:"BUS"},
+ {no:"RJ14GD7890",cls:"Truck (Class 4)",ax:4,amt:570,open:true,car:"TRUCK"},
  {no:"--",cls:"No Vehicle",ax:"-",amt:0,open:false,car:""},
- {no:"UP32KL1122",cls:"Car (Class 1)",ax:2,amt:80,open:true,car:"ðŸš—"},
- {no:"MH12AB3456",cls:"LCV (Class 2)",ax:2,amt:120,open:true,car:"ðŸš™"}
+ {no:"UP32KL1122",cls:"Car (Class 1)",ax:2,amt:80,open:true,car:"CAR"},
+ {no:"MH12AB3456",cls:"LCV (Class 2)",ax:2,amt:120,open:true,car:"CAR"}
 ];
 data.forEach((d,i)=>{
  d.payMode = d.open ? ["FASTag","Cash","UPI","Card"][i%4] : "N/A";
@@ -276,20 +276,20 @@ data.forEach((d,i)=>{
  <div class="lane">
   <div class="lanehead">LANE ${n}<span class="gatebadge ${d.open?"":"closed"}" id="gate${n}">${d.open?"OPEN":"CLOSED"}</span></div>
   <div class="road">
-   <div class="skyline"></div><div class="roadarrow">â†’</div><div class="roadmark"></div>
-   <div class="camera">ðŸ“¹</div><div class="tollbooth"></div>
+   <div class="skyline"></div><div class="roadarrow">-></div><div class="roadmark"></div>
+   <div class="camera">CAMERA</div><div class="tollbooth"></div>
    <div class="barrier ${d.open?"open":"closed"}" id="barrier${n}"></div>
    <div class="light"><span class="bulb red ${d.open?"":"on"}" id="red${n}"></span><span class="bulb green ${d.open?"on":""}" id="green${n}"></span></div>
    <div class="car" id="car${n}">${d.car}</div>
   </div>
   <div class="lanedata">
    <div class="plate">${d.no}</div><div class="detail">${d.cls}</div>
-   <div class="detail">Axles: ${d.ax}</div><div class="amount">â‚¹ ${Number(d.amt).toFixed(2)}</div>
+   <div class="detail">Axles: ${d.ax}</div><div class="amount">Rs. ${Number(d.amt).toFixed(2)}</div>
    <div class="ufd">
     <div class="ufd-title">USER FARE DISPLAY</div>
     <div class="ufd-class">${d.cls}</div>
     <div style="font-size:12px;margin:4px 0">Payment: ${d.payMode || "FASTag"}</div>
-    <div class="ufd-amount">â‚¹ ${Number(d.amt).toFixed(2)}</div>
+    <div class="ufd-amount">Rs. ${Number(d.amt).toFixed(2)}</div>
     <div class="ufd-status">${d.open?"PAYMENT APPROVED":"LANE CLOSED"}</div>
    </div>
   </div>
@@ -316,7 +316,7 @@ function recordDemoVehicle(vehicle) {
   if (approvedEl) approvedEl.textContent = demoApproved.toLocaleString("en-IN");
   if (declinedEl) declinedEl.textContent = demoDeclined.toLocaleString("en-IN");
   if (revenueEl) revenueEl.textContent =
-    "â‚¹ " + demoRevenue.toLocaleString("en-IN");
+    "Rs. " + demoRevenue.toLocaleString("en-IN");
 }
 
 /* Continuous demo cycle: lane 6 remains closed. */
@@ -381,7 +381,7 @@ data.forEach((d,i)=>{
  const dashboardHTML=main.innerHTML;
  const pages={
  "Lane Monitoring":`
-   <h2>ðŸš¦ Lane Monitoring</h2>
+   <h2>LANE Lane Monitoring</h2>
    <p>8-lane live demo monitoring. Lane 6 is in maintenance mode.</p>
    <div class="panel" style="padding:18px">
    <h3>Lane Status</h3>
@@ -389,18 +389,18 @@ data.forEach((d,i)=>{
    <tbody>${Array.from({length:8},(_,i)=>`<tr><td>Lane ${i+1}</td><td>${i===5?"--":"Demo vehicle"}</td><td>${i===5?"Maintenance":"Monitoring"}</td><td><button data-lane="${i+1}" class="lane-toggle">${i===5?"Enable":"Disable"}</button></td></tr>`).join("")}</tbody></table>
    </div>`,
  "Transactions":`
-   <h2>â–¤ Transactions</h2><div class="panel" style="padding:16px">
+   <h2>TRANSACTIONS Transactions</h2><div class="panel" style="padding:16px">
    <input id="txsearch" placeholder="Search vehicle number..." style="padding:10px;width:min(100%,360px);margin-bottom:12px">
    <div style="overflow:auto"><table id="txtable"><thead><tr><th>#</th><th>Time</th><th>Lane</th><th>Vehicle No.</th><th>Class</th><th>Amount</th><th>Status</th></tr></thead>
    <tbody>${[...document.querySelectorAll(".bottom tbody tr")].map(r=>r.outerHTML).join("")}</tbody></table></div></div>`,
  "FASTag Management":`
-   <h2>â—† FASTag Management</h2><div class="panel" style="padding:18px">
+   <h2>ONLINE FASTag Management</h2><div class="panel" style="padding:18px">
    <p>Demo FASTag lookup</p><label>Vehicle / FASTag number</label><br>
    <input id="taginput" placeholder="Enter vehicle or tag number" style="padding:10px;margin:10px 0;width:min(100%,360px)">
    <button id="tagcheck">Check Tag</button><p id="tagresult">Enter a number to check the demo record.</p>
    <hr><p>Successful: 1,213 | Pending: 12 | Failed: 23</p></div>`,
  "AVC & ANPR":`
-   <h2>â–£ AVC & ANPR</h2><div class="panel" style="padding:18px">
+   <h2>AVC & ANPR AVC & ANPR</h2><div class="panel" style="padding:18px">
    <p>Demo vehicle classification and number-plate recognition.</p>
    <label>Lane</label> <select id="anprlane">${Array.from({length:8},(_,i)=>`<option>${i+1}</option>`).join("")}</select>
    <label>Vehicle class</label><select id="anprclass"><option>Car (Class 1)</option><option>LCV (Class 2)</option><option>Bus (Class 3)</option><option>Truck (Class 4)</option></select>
@@ -411,18 +411,18 @@ data.forEach((d,i)=>{
    </select>
    <button id="anprsave">Simulate Detection</button><p id="anprresult"></p></div>`,
  "Reports":`
-   <h2>â–¥ Reports</h2><div class="panel" style="padding:18px">
+   <h2>REPORTS Reports</h2><div class="panel" style="padding:18px">
    <p>Demo summary based on the dashboard figures.</p>
    <p>Total Vehicles: <b>1,248</b></p><p>Approved: <b>1,213</b></p>
-   <p>Declined: <b>35</b></p><p>Total Revenue: <b>â‚¹ 3,74,650</b></p>
+   <p>Declined: <b>35</b></p><p>Total Revenue: <b>Rs. 3,74,650</b></p>
    <button id="downloadreport">Download CSV Report</button></div>`,
  "Devices":`
-   <h2>âš™ Devices</h2><div class="panel" style="padding:18px">
+   <h2>SETTINGS Devices</h2><div class="panel" style="padding:18px">
    <table><thead><tr><th>Device</th><th>Status</th><th>Action</th></tr></thead><tbody>
    ${["API Server","MySQL Database","ANPR Camera","AVC System","AVCC Device","Lane Controllers","Network"].map(x=>`<tr><td>${x}</td><td><span class="status">Demo Online</span></td><td><button class="device-check">Check</button></td></tr>`).join("")}
    </tbody></table><p id="device-result"></p></div>`,
  "User Management":`
-   <h2>ðŸ‘¤ User Management</h2>
+   <h2>USER User Management</h2>
    <div class="panel" style="padding:18px">
     <h3>Add New User</h3>
     <form id="userform">
@@ -447,23 +447,23 @@ data.forEach((d,i)=>{
     <p style="color:#ffcf76">Demo only: users are not saved to a database. Do not use real passwords here.</p>
    </div>`,
  "UFD Display":`
-   <h2>ðŸ–¥ User Fare Display (UFD)</h2>
+   <h2>DISPLAY User Fare Display (UFD)</h2>
    <p>Lane-wise demo fare information shown to the vehicle driver.</p>
    <div class="panel" style="padding:16px;overflow:auto">
     <table><thead><tr><th>Lane</th><th>Vehicle Class</th><th>Axles</th><th>Toll Fare</th><th>Payment Mode</th><th>UFD Status</th></tr></thead>
-    <tbody>${data.map((d,i)=>`<tr><td>Lane ${i+1}</td><td>${d.cls}</td><td>${d.ax}</td><td>â‚¹ ${Number(d.amt).toFixed(2)}</td><td>${d.payMode || "FASTag"}</td><td>${d.open?"Demo: Approved":"Lane Closed"}</td></tr>`).join("")}</tbody></table>
+    <tbody>${data.map((d,i)=>`<tr><td>Lane ${i+1}</td><td>${d.cls}</td><td>${d.ax}</td><td>Rs. ${Number(d.amt).toFixed(2)}</td><td>${d.payMode || "FASTag"}</td><td>${d.open?"Demo: Approved":"Lane Closed"}</td></tr>`).join("")}</tbody></table>
    </div>
    <p style="color:#ffcf76">This is a software preview. Physical UFD hardware is not connected.</p>`,
  "AVCC":`
-   <h2>ðŸš˜ AVCC - Automatic Vehicle Classification</h2>
+   <h2>VEHICLE AVCC - Automatic Vehicle Classification</h2>
    <p>Lane-wise vehicle classification demo.</p>
    <div class="panel" style="padding:16px;overflow:auto">
     <table><thead><tr><th>Lane</th><th>Vehicle Number</th><th>Classification</th><th>Axles</th><th>Fare</th><th>Status</th></tr></thead>
-    <tbody>${data.map((d,i)=>`<tr><td>Lane ${i+1}</td><td id="avcc-plate-${i+1}">${d.no}</td><td>${d.cls}</td><td>${d.ax}</td><td>â‚¹ ${Number(d.amt).toFixed(2)}</td><td id="avcc-status-${i+1}">${d.open?"Demo: Classified":"Lane Closed"}</td></tr>`).join("")}</tbody></table>
+    <tbody>${data.map((d,i)=>`<tr><td>Lane ${i+1}</td><td id="avcc-plate-${i+1}">${d.no}</td><td>${d.cls}</td><td>${d.ax}</td><td>Rs. ${Number(d.amt).toFixed(2)}</td><td id="avcc-status-${i+1}">${d.open?"Demo: Classified":"Lane Closed"}</td></tr>`).join("")}</tbody></table>
    </div>
    <p style="color:#ffcf76">AVCC hardware se live data abhi connected nahi hai.</p>`,
  "Settings":`
-   <h2>âš™ Settings</h2><div class="panel" style="padding:18px">
+   <h2>SETTINGS Settings</h2><div class="panel" style="padding:18px">
    <label>Plaza Name</label><br><input id="plazaname" value="TOLL PLAZA" style="padding:9px;margin:8px 0">
    <br><label>Demo cycle speed</label><br><select id="cyclespeed"><option value="normal">Normal</option><option value="fast">Fast</option></select>
    <br><button id="savesettings" style="margin-top:12px">Save Settings</button><p id="settingresult"></p></div>`
@@ -530,7 +530,7 @@ data.forEach((d,i)=>{
      };
    }
    if(name==="Devices"){
-     document.querySelectorAll(".device-check").forEach(b=>b.onclick=()=>document.getElementById("device-result").textContent="Demo status only â€” real device connectivity is not configured.");
+     document.querySelectorAll(".device-check").forEach(b=>b.onclick=()=>document.getElementById("device-result").textContent="Demo status only  real device connectivity is not configured.");
    }
    if(name==="User Management"){
      const form=document.getElementById("userform");
@@ -596,7 +596,7 @@ data.forEach((d,i)=>{
    if(password===null)return;
 
    if(username.trim()==="admin" && password==="admin123"){
-     label.textContent="â™Ÿ Admin";
+     label.textContent="USER Admin";
      alert("Demo login successful. Welcome, Vivek Yadav!");
    } else {
      alert("Invalid demo credentials.");
@@ -604,7 +604,7 @@ data.forEach((d,i)=>{
  };
 
  logoutBtn.onclick=()=>{
-   label.textContent="â™Ÿ Guest";
+   label.textContent="USER Guest";
    alert("Logged out from demo display.");
  };
 })();
@@ -690,7 +690,7 @@ text-align:center
 </head>
 <body>
 <div class="login-box">
-<div class="logo">♜</div>
+<div class="logo"></div>
 <h1>Toll Plaza Management System</h1>
 <div class="subtitle">Secure Administrator Login</div>
 {ERROR}
