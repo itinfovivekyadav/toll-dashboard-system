@@ -1,0 +1,6 @@
+﻿services:
+  - type: web
+    name: toll-dashboard-system
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn Toll_Dashboard_Code:app --bind 0.0.0.0:
