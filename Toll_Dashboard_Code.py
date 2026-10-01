@@ -1,6 +1,6 @@
 ﻿from http.server import BaseHTTPRequestHandler, HTTPServer
 
-PORT = 8080
+PORT = int(os.environ.get("PORT", 8080))
 
 HTML = r'''<!DOCTYPE html>
 <html lang="en">
@@ -617,7 +617,7 @@ from http import cookies
 import secrets
 import urllib.parse
 
-PORT = 8080
+PORT = int(os.environ.get("PORT", 8080))
 
 USERNAME = "admin"
 PASSWORD = "admin123"
@@ -916,7 +916,7 @@ if __name__ == "__main__":
     print("=" * 60)
     print("TOLL PLAZA MANAGEMENT SYSTEM")
     print("=" * 60)
-    print("Server   : http://127.0.0.1:8080")
+    print("Server   : http://0.0.0.0:")
     print("Username : admin")
     print("Password : admin123")
     print("=" * 60)
@@ -925,3 +925,4 @@ if __name__ == "__main__":
         ("0.0.0.0", PORT),
         Handler
     ).serve_forever()
+
