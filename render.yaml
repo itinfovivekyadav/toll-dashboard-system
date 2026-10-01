@@ -1,6 +1,6 @@
 ﻿services:
   - type: web
-    name: toll-dashboard-system
+    name: toll-dashboard-system-1
     runtime: python
     plan: free
     buildCommand: pip install -r requirements.txt
