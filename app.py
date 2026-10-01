@@ -1,17 +1,5 @@
 ﻿import os
-import subprocess
-import sys
+import runpy
 
-PORT = os.environ.get("PORT", "8080")
-
-env = os.environ.copy()
-env["PORT"] = PORT
-
-print("Starting Toll Dashboard...")
-print("PORT =", PORT)
-
-subprocess.run(
-    [sys.executable, "Toll_Dashboard_Code.py"],
-    env=env,
-    check=True
-)
+if __name__ == "__main__":
+    runpy.run_path("Toll_Dashboard_Code.py", run_name="__main__")

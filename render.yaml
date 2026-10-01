@@ -4,5 +4,5 @@
     runtime: python
     plan: free
     buildCommand: pip install -r requirements.txt
-    startCommand: python app.py
+    startCommand: python Toll_Dashboard_Code.py
     autoDeployTrigger: commit
