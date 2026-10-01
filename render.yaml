@@ -5,3 +5,4 @@
     plan: free
     buildCommand: pip install -r requirements.txt
     startCommand: python Toll_Dashboard_Code.py
+    autoDeploy: true
