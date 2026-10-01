@@ -3,37 +3,50 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 
 PORT = int(os.environ.get("PORT", "8080"))
 
+with open("Toll_Dashboard_Code.py", "r", encoding="utf-8") as f:
+    SOURCE = f.read()
+
 class Handler(BaseHTTPRequestHandler):
     def do_GET(self):
         try:
-            with open("Toll_Dashboard_Code.py", "r", encoding="utf-8") as f:
-                source = f.read()
+            start = SOURCE.find("<!DOCTYPE html>")
+            if start == -1:
+                start = SOURCE.find("<html")
 
-            # Existing Python file contains the dashboard/server code.
-            # Execute it only when this entry point is started directly.
-            if self.path == "/" or self.path.startswith("/"):
-                self.send_response(200)
-                self.send_header("Content-Type", "text/html; charset=utf-8")
-                self.end_headers()
+            end = SOURCE.rfind("</html>")
 
-                # Extract the HTML portion from the existing file.
-                start = source.find("<!DOCTYPE html>")
-                if start == -1:
-                    start = source.find("<html")
-                end = source.rfind("</html>")
+            if start >= 0 and end >= 0:
+                html = SOURCE[start:end + 7]
+            else:
+                html = """<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Toll Plaza Management System</title>
+</head>
+<body>
+<h1>Toll Plaza Management System</h1>
+<p>Dashboard is running.</p>
+</body>
+</html>"""
 
-                if start != -1 and end != -1:
-                    html = source[start:end + 7]
-                else:
-                    html = "<h1>Toll Plaza Management System</h1><p>Dashboard is running.</p>"
+            data = html.encode("utf-8")
+            self.send_response(200)
+            self.send_header("Content-Type", "text/html; charset=utf-8")
+            self.send_header("Content-Length", str(len(data)))
+            self.end_headers()
+            self.wfile.write(data)
 
-                self.wfile.write(html.encode("utf-8"))
         except Exception as e:
+            data = ("Server Error: " + str(e)).encode("utf-8")
             self.send_response(500)
             self.send_header("Content-Type", "text/plain; charset=utf-8")
+            self.send_header("Content-Length", str(len(data)))
             self.end_headers()
-            self.wfile.write(str(e).encode("utf-8"))
+            self.wfile.write(data)
 
-if __name__ == "__main__":
-    print(f"Server running on port {PORT}")
-    HTTPServer(("0.0.0.0", PORT), Handler).serve_forever()
+    def log_message(self, format, *args):
+        print(format % args)
+
+print(f"Starting Toll Dashboard on 0.0.0.0:{PORT}")
+HTTPServer(("0.0.0.0", PORT), Handler).serve_forever()
